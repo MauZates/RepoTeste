@@ -9,6 +9,11 @@ namespace ExercicioEncapsulamento
 		{
 			#region FormaMau
 
+
+
+
+
+
 			//Console.Write("Entre com o número da Conta: ");
 			//int conta = int.Parse(Console.ReadLine());
 			//Console.Write("Entre com o titular da Conta: ");
