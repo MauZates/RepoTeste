@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Globalization;
 namespace Vetores
 {
 	class Program
