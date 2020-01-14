@@ -25,10 +25,10 @@ namespace ParamsAndRefOut
 
             #region Out
 
-            int a = 10;
-            int triple;
-            Calculator.Triple(a, out triple);
-            Console.WriteLine(triple);
+            //int a = 10;
+            //int triple;
+            //Calculator.Triple(a, out triple);
+            //Console.WriteLine(triple);
 
             #endregion
         }
