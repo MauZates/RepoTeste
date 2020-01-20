@@ -12,7 +12,7 @@ namespace ExeVetor01
 
             for (int i = 0; i < n; i++)
             {
-                Console.Write($"Digite o {i} salário: ");
+                Console.Write($"Digite o {i + 1} salário: ");
                 int salario = int.Parse(Console.ReadLine());
                 Salarios[i] = salario;
 
