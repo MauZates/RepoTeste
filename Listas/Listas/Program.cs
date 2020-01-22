@@ -61,6 +61,14 @@ namespace Listas
 
             Console.WriteLine("------------------------------------");
 
+            list.RemoveRange(2, 2);
+            foreach (string obj in list)
+            {
+                Console.WriteLine(obj);
+            }
+
+            Console.WriteLine("------------------------------------");
+
             list.RemoveAll(x => x[0] == 'A');
             foreach (string obj in list)
             {
@@ -68,6 +76,7 @@ namespace Listas
             }
 
             Console.WriteLine("------------------------------------");
+
 
             
 
