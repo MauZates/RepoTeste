@@ -1,6 +1,6 @@
 ﻿namespace Course.Entities
 {
-    class Account
+    abstract class Account
     {
         public int Number { get; private set; }
         public string Holder { get; private set; }
