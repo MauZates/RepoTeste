@@ -20,6 +20,7 @@ namespace ComposicaoEx01Resolvido.Entities
         {
 
         }
+
         /// <summary>
         /// Constructor with 1 argument
         /// </summary>
