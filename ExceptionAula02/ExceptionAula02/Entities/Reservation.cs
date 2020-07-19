@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ExceptionAula02.Entities.Exceptions;
 
 namespace ExceptionAula02.Entities
 {
@@ -37,6 +38,11 @@ namespace ExceptionAula02.Entities
         /// <param name="checkOut"> Dia da saida</param>
         public Reservation(int roomNumber, DateTime checkIn, DateTime checkOut)
         {
+            if (checkOut <= checkIn)
+            {
+                throw new DomainException("Check-out date mmust be after check-in date");
+            }
+
             RoomNumber = roomNumber;
             CheckIn = checkIn;
             CheckOut = checkOut;
@@ -58,22 +64,21 @@ namespace ExceptionAula02.Entities
         /// </summary>
         /// <param name="checkIn">Nova data de entrada</param>
         /// <param name="checkOut">Nova data de saida</param>
-        public string UpdateDates(DateTime checkIn, DateTime checkOut)
+        public void UpdateDates(DateTime checkIn, DateTime checkOut)
         {
             DateTime now = DateTime.Now;
             if (checkIn < now || checkOut < now)
             {
-                return "Reservation dates for update mus be future dates";
+                throw new DomainException("Reservation dates for update mus be future dates");
             }
-            else if (checkOut <= checkIn)
+
+            if (checkOut <= checkIn)
             {
-                return "Error in reservation: Check-out date mmust be after check-in date";
+                throw new DomainException("Check-out date mmust be after check-in date");
             }
 
             CheckIn = checkIn;
             CheckOut = checkOut;
-
-            return null;
         }
 
         /// <summary>
