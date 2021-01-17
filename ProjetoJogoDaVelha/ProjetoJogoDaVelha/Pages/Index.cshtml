@@ -1,0 +1,114 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<style type="text/css">
+
+    .list-group-item {
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    }
+
+    .row {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    table {
+        border: none;
+    }
+
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .button {
+        /*background-color: lightgray;
+        font-size: 30px;
+        color: black;
+        text-align: center;
+        opacity: 1;
+        transition: 0.3s;
+        display: inline-block;
+        text-decoration: none;
+        cursor: pointer;*/
+        background-color: white;
+        color: black;
+        border: 2px solid #008CBA;
+        width: 100%;
+        height: 100%;
+        border: double;
+        outline: none;
+        transition-duration: 0.2s;
+    }
+    
+        .button:hover {
+            background-color: #008CBA;
+            color: white;
+        }
+
+    td {
+        width: 100px;
+        height: 100px;
+    }
+
+</style>
+
+<div class="row">
+    <p> </br> </p>
+</div>
+
+<div class="row">
+    <div>
+        <table class="center">
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="button" id="button1" class="button" value=" ">
+                    </td>
+                    <td>
+                        <input type="button" id="button2" class="button" value=" ">
+                    </td>
+                    <td>
+                        <input type="button" id="button3" class="button" value=" ">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" id="button4" class="button" value=" ">
+                    </td>
+                    <td>
+                        <input type="button" id="button5" class="button" value=" ">
+                    </td>
+                    <td>
+                        <input type="button" id="button6" class="button" value=" ">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" id="button7" class="button" value=" ">
+                    </td>
+                    <td>
+                        <input type="button" id="button8" class="button" value=" ">
+                    </td>
+                    <td>
+                        <input type="button" id="button9" class="button" value=" ">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+    $('.button').on('click', function () {
+        console.log("Vc clicou no botão");
+    });
+</script>
