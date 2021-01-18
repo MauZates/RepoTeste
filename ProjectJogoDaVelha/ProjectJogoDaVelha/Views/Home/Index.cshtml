@@ -212,16 +212,6 @@
 
     ///Botão que Inicia o Jogo e coloca todas as variaveis com os valores iniciais
     $('#Start').click(function () {
-
-        $('#InformacoesIniciais').hide();
-        $('#TelaSecundaria').show();
-        if (isRestart) {
-
-        } else {
-            $('#JogadorPlacar1').html($('#Jogador_1').val());
-            $('#JogadorPlacar2').html($('#Jogador_2').val());
-        }
-        
         comecou = false;
         playerTime;
         gameOver = false;
@@ -231,6 +221,14 @@
 
         $('.button').val(" ");
         if (Validacoes()) {
+            $('#InformacoesIniciais').hide();
+            $('#TelaSecundaria').show();
+            if (isRestart) {
+
+            } else {
+                $('#JogadorPlacar1').html($('#Jogador_1').val());
+                $('#JogadorPlacar2').html($('#Jogador_2').val());
+            }
             ComecarPartida();
         }
     });
