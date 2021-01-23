@@ -7,6 +7,9 @@ using VerificaNumeroParOuImpar.Class;
 
 namespace VerificaNumeroParOuImpar
 {
+    /// <summary>
+    /// Classe program principal
+    /// </summary>
     public class Program
     {
         static void Main(string[] args)
@@ -14,15 +17,7 @@ namespace VerificaNumeroParOuImpar
             Console.WriteLine("Digite um Número");
             int.TryParse(Console.ReadLine().ToString(), out int numAux);
             Number numb = new Number(numAux,true);
-
-            if (numb.ParOuImpar)
-            {
-                Console.WriteLine(numb);
-            }
-            else
-            {
-                Console.WriteLine(numb);
-            }
+            Console.WriteLine(numb);       
         }
     }
 }
