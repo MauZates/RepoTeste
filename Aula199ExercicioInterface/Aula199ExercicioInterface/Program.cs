@@ -32,7 +32,7 @@ namespace Aula199ExercicioInterface
             Console.Write("Enter number of installments: ");
             int months = int.Parse(Console.ReadLine());
 
-            Console.Write("Amazon = 1 || Paypal = 2 ");
+            Console.Write("Amazon = 1 || Paypal = 2: ");
             bool isAmazon = int.Parse(Console.ReadLine()) == 1 ? true : false;
 
             if (isAmazon)

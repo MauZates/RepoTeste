@@ -11,7 +11,7 @@ namespace Aula199ExercicioInterface.Services
 
         private const double FeePercentage = 0.10;
         private const double MonthlyInterest = 0.05;
-
+                
         public double PaymentFee(double amount)
         {
             return amount * FeePercentage;
