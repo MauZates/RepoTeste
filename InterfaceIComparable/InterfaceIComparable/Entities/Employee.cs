@@ -31,17 +31,17 @@ namespace InterfaceIComparable.Entities
         //    _salary = double.Parse(employeeLine[1],CultureInfo.InvariantCulture);
         //}
 
-        //public int CompareTo(object obj)
-        //{
-        //    if (!(obj is Employee))
-        //    {
-        //        throw new ArgumentException("The object is not a Employee");
-        //    }
+        public int CompareTo(object obj)
+        {
+            if (!(obj is Employee))
+            {
+                throw new ArgumentException("The object is not a Employee");
+            }
 
-        //    Employee temp = obj as Employee;
+            Employee temp = obj as Employee;
 
-        //    return _name.CompareTo(temp._name);
-        //}
+            return _name.CompareTo(temp._name);
+        }
 
         public override string ToString()
         {
