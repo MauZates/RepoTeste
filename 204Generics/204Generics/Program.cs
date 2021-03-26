@@ -1,6 +1,7 @@
 ﻿using _204Generics.Entities;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,19 +12,49 @@ namespace _204Generics
     {
         static void Main(string[] args)
         {
-            PrintService<int> printService = new PrintService<int>();
+            #region PrimeiraVezEstudada            
+            //PrintService<int> printService = new PrintService<int>();
+
+            //Console.Write("How Many Values? ");
+            //int n = int.Parse(Console.ReadLine());
+
+            //for (int i = 0; i < n; i++)
+            //{
+            //    int x = int.Parse(Console.ReadLine());
+            //    printService.AddValue(x);
+            //}
+
+            //printService.Print();
+            //Console.WriteLine("First: " + printService.First());
+            #endregion
+
+            PrintService printService = new PrintService();
 
             Console.Write("How Many Values? ");
-            int n = int.Parse(Console.ReadLine());
 
-            for (int i = 0; i < n; i++)
+            if (int.TryParse(Console.ReadLine(), out int n))
             {
-                int x = int.Parse(Console.ReadLine());
-                printService.AddValue(x);
+                for (int i = 0; i < n; i++)
+                {
+                    if (int.TryParse(Console.ReadLine(), out int x))
+                    {
+                        printService.AddValue(x);
+                    }
+                }
             }
 
             printService.Print();
             Console.WriteLine("First: " + printService.First());
+
+
+            //estudos extras
+            #region RegiaoEstudosEstranhos
+            //var culturaBrasileira = CultureInfo.CreateSpecificCulture("pt-BR");
+            //string x = "R$1000,50";
+            //decimal val = decimal.Parse(x, NumberStyles.Currency, culturaBrasileira);
+            //Console.WriteLine(val);
+            #endregion
+
         }
     }
 }
