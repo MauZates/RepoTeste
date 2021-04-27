@@ -13,25 +13,30 @@ namespace _204Generics
         static void Main(string[] args)
         {
             #region PrimeiraVezEstudada            
-            //PrintService<int> printService = new PrintService<int>();
+            //PrintService printService = new PrintService();
 
             //Console.Write("How Many Values? ");
-            //int n = int.Parse(Console.ReadLine());
 
-            //for (int i = 0; i < n; i++)
+            //if (int.TryParse(Console.ReadLine(), out int n))
             //{
-            //    int x = int.Parse(Console.ReadLine());
-            //    printService.AddValue(x);
+            //    for (int i = 0; i < n; i++)
+            //    {
+            //        if (int.TryParse(Console.ReadLine(), out int x))
+            //        {
+            //            printService.AddValue(x);
+            //        }
+            //    }
             //}
 
             //printService.Print();
             //Console.WriteLine("First: " + printService.First());
             #endregion
 
-            PrintService printService = new PrintService();
+            #region SegundaVezEstudada
+            PrintService<int> printService = new PrintService<int>();
+            //PrintService<string> printService = new PrintService<string>();
 
             Console.Write("How Many Values? ");
-
             if (int.TryParse(Console.ReadLine(), out int n))
             {
                 for (int i = 0; i < n; i++)
@@ -45,9 +50,9 @@ namespace _204Generics
 
             printService.Print();
             Console.WriteLine("First: " + printService.First());
+            #endregion
 
 
-            //estudos extras
             #region RegiaoEstudosEstranhos
             //var culturaBrasileira = CultureInfo.CreateSpecificCulture("pt-BR");
             //string x = "R$1000,50";
