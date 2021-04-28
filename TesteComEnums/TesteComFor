@@ -54,7 +54,6 @@ public class Program
 		
 		for(var i= 1; i <= qtdDeEnums; i++)
 		{
-			int item = (int)TiposDeEnums.Tipos.numero1;
 			TiposDeEnums.Tipos item1 = (TiposDeEnums.Tipos)i;
 			Console.WriteLine("Essa é a descrição com o for: {0} ",item1.GetDescription());
 		}
