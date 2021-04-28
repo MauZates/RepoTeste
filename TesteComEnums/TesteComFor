@@ -68,5 +68,6 @@ public class Program
 	}
 }
 
+string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
 
 
