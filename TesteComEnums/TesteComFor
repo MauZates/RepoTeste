@@ -17,10 +17,10 @@ public class TiposDeEnums
         [Description("Fundação 2")]
         numero2 = 2,
 
-        [Description("Número 3")]
+        [Description("Númeró 3")]
         numero3 = 3,
 
-        [Description("Número 4")]
+        [Description("Númeró 4")]
         numero4 = 4,
 	}
 }
@@ -46,11 +46,17 @@ public class Program
     public static void Main(string[] args)
     {
 	    string Descricao = "";
-		for(var i= 1; i < 5; i++)
+        Descricao = TiposDeEnums.Tipos.numero1.GetDescription();
+        Console.WriteLine("Essa é a descrição sem o for: {0} ",Descricao);
+		Console.WriteLine();
+		
+		var qtdDeEnums = Enum.GetNames(typeof(TiposDeEnums.Tipos)).Length;
+		
+		for(var i= 1; i <= qtdDeEnums; i++)
 		{
 			int item = (int)TiposDeEnums.Tipos.numero1;
 			TiposDeEnums.Tipos item1 = (TiposDeEnums.Tipos)i;
-			Console.WriteLine("Essa é a descrição: {0} ",item1.GetDescription());
+			Console.WriteLine("Essa é a descrição com o for: {0} ",item1.GetDescription());
 		}
 	}
 }
